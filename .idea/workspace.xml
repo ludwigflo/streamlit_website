@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fd25167-d698-46f6-b7cf-4957ef9e00d3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/core/layout.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/router.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/geschichte.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/home.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/mannschaften.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/neuigkeiten.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/layout.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/layout.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/router.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/router.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/geschichte.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/geschichte.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/neuigkeiten.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/neuigkeiten.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

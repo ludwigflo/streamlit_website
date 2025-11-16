@@ -1,3 +1,5 @@
+# app.py
+
 import streamlit as st
 from core.router import PageRouter
 from pages.home import HomePage
@@ -8,12 +10,12 @@ from pages.geschichte import GeschichtePage
 
 def main():
     st.set_page_config(
-        page_title="Tischtennis Bad Aibling",
+        page_title="TuS Bad Aibling Tischtennis",
         page_icon="🏓",
         layout="wide",
     )
 
-    # You can keep this or comment it out; it won't affect centering.
+    # Optional: hide Streamlit’s own sidebar
     st.markdown("""
         <style>
             [data-testid="stSidebar"] {display:none !important;}
@@ -30,7 +32,7 @@ def main():
     ]
 
     router = PageRouter(
-        club_name="Tischtennis Bad Aibling",
+        club_name="  TuS Bad Aibling Tischtennis",
         logo_path="assets/logo.png",
         pages=pages,
     )

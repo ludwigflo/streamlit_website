@@ -1,4 +1,3 @@
-# pages/geschichte.py
 import streamlit as st
 from core.router import BasePage
 from core.layout import centered_content
