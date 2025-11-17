@@ -6,7 +6,7 @@ from core.layout import centered_content
 class NeuigkeitenPage(BasePage):
     @property
     def name(self) -> str:
-        return "Neuigkeiten"
+        return "News"
 
     def render(self) -> None:
             # In the future you might load news from a database or a CSV

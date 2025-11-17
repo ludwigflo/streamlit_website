@@ -7,7 +7,7 @@ from core.layout import centered_content
 class MannschaftenPage(BasePage):
     @property
     def name(self) -> str:
-        return "Mannschaften"
+        return "Teams"
 
     def render(self) -> None:
         with centered_content():

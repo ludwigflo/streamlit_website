@@ -33,7 +33,7 @@ def render_header(club_name: str, logo_path: str) -> None:
     if logo_b64:
         logo_html = (
             f'<img src="data:image/png;base64,{logo_b64}" '
-            'style="height:4em;width:auto;margin:0;" alt="Logo" />'
+            'style="height:3em;width:auto;margin:0;" alt="Logo" />'
         )
     else:
         logo_html = '<span style="font-size:1.2em;margin:0;">🏓</span>'
