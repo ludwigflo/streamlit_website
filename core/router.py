@@ -31,22 +31,17 @@ def render_left_nav(page_names: list[str], current_page: str) -> str:
         st.session_state["menu_open"] = True
 
     # Hamburger toggle (font-size now controlled globally in app.py)
-    if st.button("☰ Menü"):
+    if st.button("☰", use_container_width=True):
         st.session_state["menu_open"] = not st.session_state["menu_open"]
 
     selected = current_page
 
     # Menu entries (font-size now controlled globally in app.py)
     if st.session_state["menu_open"]:
-        selected = st.radio(
-            "Navigation",
-            options=page_names,
-            index=page_names.index(current_page),
-            label_visibility="collapsed",
-        )
 
+        selected = st.radio("Navigation", index=page_names.index(current_page),
+                            label_visibility="collapsed", options=page_names)
     return selected
-
 
 
 class PageRouter:
@@ -64,6 +59,7 @@ class PageRouter:
             st.session_state["current_page"] = pages[0].name
 
     def run(self) -> None:
+
         # Header at the top (logo + title)
         render_header(self.club_name, self.logo_path)
 
@@ -71,9 +67,10 @@ class PageRouter:
         current_page = st.session_state.get("current_page", page_names[0])
 
         # Three columns: left = menu, middle = divider, right = content
-        col_menu, col_divider, col_content = st.columns([1, 0.05, 5])
+        col_menu, col_content = st.columns([1, 7])
 
         with col_menu:
+
             st.markdown('<div class="tt-left-menu">', unsafe_allow_html=True)
             selected = render_left_nav(page_names, current_page)
             st.markdown('</div>', unsafe_allow_html=True)
@@ -83,4 +80,6 @@ class PageRouter:
 
         # RIGHT: page content
         with col_content:
+            st.markdown('<div class="tt-content-scroll">', unsafe_allow_html=True)
             self.pages[selected].render()
+            st.markdown('</div>', unsafe_allow_html=True)

@@ -15,14 +15,26 @@ def main():
         layout="wide",
     )
 
-    # Optional: hide Streamlit’s own sidebar
     st.markdown("""
-        <style>
-            [data-testid="stSidebar"] {display:none !important;}
-            [data-testid="stSidebarToggle"] {display:none !important;}
-            [data-testid="collapsedControl"] {display:none !important;}
-        </style>
-    """, unsafe_allow_html=True)
+            <style>
+                /* Hide Streamlit’s own sidebar */
+                [data-testid="stSidebar"] {display:none !important;}
+                [data-testid="stSidebarToggle"] {display:none !important;}
+                [data-testid="collapsedControl"] {display:none !important;}
+
+                /* 👇 Scrollable content area on the right side */
+                .tt-content-scroll {
+                    overflow-x: auto;   /* enable horizontal scroll when needed */
+                    width: 100%;
+                }
+
+                /* 👇 Force inner content to be wider than small windows */
+                .tt-content-scroll > div {
+                    min-width: 1100px;       /* adjust to your preferred design width */
+                    max-width: none !important;
+                }
+            </style>
+        """, unsafe_allow_html=True)
 
     pages = [
         HomePage(),
